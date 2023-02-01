@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nkaleth/webpack_project.git"
+    "url": "git+https://github.com/Nkaleth/Leaderboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nkaleth/webpack_project/issues"
+    "url": "https://github.com/Nkaleth/Leaderboard/issues"
   },
-  "homepage": "https://github.com/Nkaleth/webpack_project#readme",
+  "homepage": "https://github.com/Nkaleth/Leaderboard#readme",
   "dependencies": {
     "lodash": "^4.17.21",
     "webpack": "^5.75.0",
