@@ -9,7 +9,7 @@ const loadScores = () => {
     const scoresList = document.querySelector('.scoresList');
     let string = '';
     result.forEach((element) => {
-      string += `<li class="indivScore">${element.user}-${element.score}</li>`;
+      string += `<li class="indivScore"><img src="https://playvalorant.com/assets/images/leaderboards/radiant-badge.png" alt="badge"><p>${element.score}</p><p>${element.user}</p></li>`;
     });
     scoresList.innerHTML = string;
   };

@@ -3,17 +3,30 @@
 body {
   background-color: #ece8e1;
   font-family: 'Teko', sans-serif;
-  height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
 }
 
 h1 {
-  position: absolute;
-  top: 10px;
-  font-size: 4em;
-  padding-left: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  font-size: 4.5rem;
+  margin: 0;
+  background-image: url(img/valorant_image.jpg);
+  background-position-y: 10%;
+  background-position-x: 40%;
+  background-size: cover;
+  color: azure;
+}
+
+h1 p {
+  margin: 0;
 }
 
 .leaderboard {
@@ -40,18 +53,16 @@ h1 {
   justify-content: space-between;
   align-items: center;
   font-size: 0.8em;
-}
-
-.scoresHead button {
-  height: 25px;
+  font-size: 1.5em;
 }
 
 .scoresList {
   padding-inline-start: 0;
   width: 85%;
   border-width: 0.2em;
-  border-style: solid;
-  border-color: black;
+
+  /* border-style: solid;
+  border-color: black; */
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -59,20 +70,61 @@ h1 {
 }
 
 .indivScore {
-  display: block;
+  display: flex;
   padding: 1%;
-  border-bottom: solid;
-  border-color: black;
+  background-color: #e3dfd9;
+  border-bottom: 3px solid hsla(50, 4%, 73%, 0.4);
+  margin-bottom: 2px;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.indivScore p {
+  margin-right: 0.5%;
+  margin-left: 3%;
+}
+
+.indivScore img {
+  width: auto;
+  height: 70px;
 }
 
 .addScoreSection {
   display: flex;
   justify-content: center;
   width: 50%;
+  align-items: center;
 }
 
 .addScoreForm {
   display: flex;
   flex-direction: column;
-  font-size: 0.8em;
+  font-size: 1.5em;
+}
+
+.Button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 150px;
+  background-color: #0f1923;
+  cursor: pointer;
+  color: #ece8e1;
+  font-size: 1.5rem;
+  font-family: 'Teko', sans-serif;
+}
+
+button:hover {
+  transition: background-color 0.3s ease-out;
+  background-color: #ff4655;
+}
+
+.inputs {
+  font-size: 1rem;
+  height: 50px;
+  margin-bottom: 4%;
+  background-color: #dbd9d2;
+  border: 1px solid #8b978f;
 }
