@@ -1,9 +1,10 @@
 import './style.css';
+
 import { loadScores, addNewScore } from './modules/leaderboard.js';
 
 const newScoreData = document.querySelector('.addScoreForm');
 const { name, score } = newScoreData.elements;
-const refresh = document.querySelector('.refresh');
+const refresh = document.querySelector('#refreshButton');
 
 loadScores();
 
