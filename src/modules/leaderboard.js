@@ -29,7 +29,7 @@ const addNewScore = (user, score) => {
         'Content-type': 'application/json; charset=UTF-8',
       },
     });
-    const data = await response.json();
+    await response.json();
   };
   sendData(url);
 };
