@@ -47,6 +47,8 @@
     <li><a href="https://www.w3schools.com/css/">CSS</a></li>
      <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
      <li><a href="https://www.w3schools.com/js/">Webpack</a></li>
+     <li><a href="https://aws.amazon.com/what-is/api/">API</a></li>
+     
   </ul>
 </details>
 
@@ -112,7 +114,7 @@ Install this project with:
 Change the main branch to the right one, execute the following command:
 
 ```sh
-  git checkout setup_project
+  git checkout api_feature
 ```
 
 ### Usage II

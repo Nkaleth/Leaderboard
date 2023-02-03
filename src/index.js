@@ -1,7 +1,20 @@
 import './style.css';
+import { loadScores, addNewScore } from './modules/leaderboard.js';
 
-const addScore = document.querySelector('.addButton');
+const newScoreData = document.querySelector('.addScoreForm');
+const { name, score } = newScoreData.elements;
+const refresh = document.querySelector('.refresh');
 
-addScore.addEventListener('submit', (e) => {
+loadScores();
+
+newScoreData.addEventListener('submit', (e) => {
   e.preventDefault();
+  const newUser = name.value;
+  const newScore = score.value;
+  addNewScore(newUser, newScore);
+  newScoreData.reset();
+});
+
+refresh.addEventListener('click', () => {
+  loadScores();
 });
