@@ -9,7 +9,7 @@ const loadScores = () => {
     const scoresList = document.querySelector('.scoresList');
     let string = '';
     result.forEach((element) => {
-      string += `<li class="indivScore">${element.user}:${element.score}</li>`;
+      string += `<li class="indivScore">${element.user}-${element.score}</li>`;
     });
     scoresList.innerHTML = string;
   };
@@ -17,18 +17,21 @@ const loadScores = () => {
 };
 
 const addNewScore = (user, score) => {
-  fetch(url, {
-    method: 'POST',
-    body: JSON.stringify({
-      user: `${user}`,
-      score: `${score}`,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+  const sendData = async (link) => {
+    const request = new Request(link);
+    const response = await fetch(request, {
+      method: 'POST',
+      body: JSON.stringify({
+        user: `${user}`,
+        score: `${score}`,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+    const data = await response.json();
+  };
+  sendData(url);
 };
 
 export { addNewScore, loadScores };
